@@ -1,6 +1,7 @@
 const menu = document.getElementById('menu')
 const list = document.getElementById('list')
 const body = document.querySelector('body')
+
 menu.onclick = function () {
   menu.classList.toggle('openmenu')
   list.classList.toggle('active')
@@ -48,6 +49,19 @@ function viewButtonToTop() {
     buttonTop.classList.remove('show')
   }
 }
+
+
+const links = document.querySelectorAll('.links')
+
+for (const link of links) {
+  link.addEventListener('click', function () {
+    list.classList.remove('active')
+    menu.classList.remove('openmenu')
+    body.classList.remove('hidden')
+  })
+}
+
+
 
 
 

@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-color);
+  background: var(--orange);
   border-radius: 10px;
 }
 
@@ -32,7 +32,13 @@ body.hidden {
   overflow: hidden;
 }
 
+.divider {
+  height: 2px;
+  background-image: linear-gradient(45deg, #9A031E, #E36414, #003566);
+}
+
 :root {
+  --orange: #E36414;
   --body-bg-color: #22212c;
   --text-color: #837e9f;
   --bg-cards: #302f3d;
@@ -42,9 +48,11 @@ body.hidden {
   --cultured-2: #e9ecefff;
   --gainsboro: #dee2e6ff;
   --light-gray: #ced4daff;
-  --cadet-blue-crayola: #adb5bdff;
-  --eerie-black: #212529ff;
+  --crayola: #adb5bdff;
+  --black: #212529ff;
 }
+
+
 
 section {
   padding: 15rem 0;
@@ -72,13 +80,13 @@ footer {
 }
 
 .title-light {
-  color: var(--text-color);
+  color: var(--orange);
   text-align: center;
 }
 
 /* ============== Background ==============*/
 .dark {
-  background-color: var(--body-bg-color);
+  background-color: var(--crayola);
 }
 
 .light {
@@ -88,7 +96,7 @@ footer {
 
 /* ============== header ============== */
 header {
-  background-color: var(--body-bg-color);
+  background-color: #E36414;
   position: fixed;
   top: 0;
   left: 0;
@@ -162,10 +170,12 @@ nav {
   height: 100vh;
   min-height: 500px;
   overflow: hidden;
-  color: var(--text-color);
-
+  color: #fff;
+  background-image: linear-gradient(45deg, #9A031E, #E36414, #003566);
   position: relative;
   z-index: 1;
+
+
 }
 
 .box {
@@ -259,11 +269,22 @@ nav {
 
 .card {
   padding: 0.5rem;
-  border: 2px solid var(--text-color);
+
+  color: #000;
+
+  background-color: #ffffff;
   border-radius: 8px;
 
   height: 100%;
   width: 300px;
+
+  border: 1px solid #bebebe;
+
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  border: 1px solid var(--orange);
 }
 
 .card img {
@@ -285,7 +306,7 @@ nav {
 
   cursor: pointer;
 
-  background-color: #837e9f;
+  background-color: var(--orange);
   color: #fff;
 
   text-transform: uppercase;
@@ -299,11 +320,11 @@ nav {
 /* ================= contact =================== */
 
 #contact {
-  color: var(--text-color);
+  color: var(--orange);
 }
 
 #contact i {
-  fill: var(--bg-cards);
+  fill: var(--orange);
 }
 
 .icon {
@@ -318,6 +339,11 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.icon-text {
+  color: var(--orange);
+  opacity: 0.8;
 }
 
 /* =============== button top ========= */
@@ -336,7 +362,10 @@ nav {
   height: 2.5rem;
   width: 2.5rem;
 
-  background-color: #302f3d;
+  background-color: var(--orange);
+  background-color: var(--orange);
+  border: 1px solid #ffffff;
+
   fill: #fff;
 
   cursor: pointer;
@@ -361,8 +390,7 @@ nav {
 
 footer {
   height: 40vh;
-  background-color: var(--body-bg-color);
-
+  background-color: var(--orange);
 }
 
 footer .container {
@@ -434,7 +462,7 @@ footer i {
 
     height: 100vh;
     width: 100%;
-    background-color: var(--bg-cards);
+    background-color: var(--orange);
 
     display: flex;
     align-items: center;
@@ -547,6 +575,11 @@ footer i {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+
+  .icon-description {
+    margin-bottom: 3rem;
   }
 
 
